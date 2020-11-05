@@ -38,7 +38,7 @@ shopt -s extglob
 echo "Enter a password"
 read pwd
 a=${#pwd}
-pwdpat="^([a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)+$"
+pwdpat="^([a-zA-Z0-9]*[@+-]+[a-zA-Z0-9]*)+$"
 if [[ $a -ge 8 ]]
 then
 if [[ $pwd =~ $pwdpat ]]
