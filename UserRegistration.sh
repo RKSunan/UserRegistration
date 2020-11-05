@@ -18,11 +18,20 @@ shopt -s extglob
 #	echo "Invalid Name"
 #fi
 echo  "Enter email"
-read email
-emailpat="^[a-zA-Z]+([.][a-zA-Z0-9]+)*[@][a-Z]+[.][a-z]+([.][a-z]+)*$"
-if [[ $email =~ $emailpat ]]
-then
+#read email
+#emailpat="^[a-zA-Z]+([.][a-zA-Z0-9]+)*[@][a-Z]+[.][a-z]+([.][a-z]+)*$"
+#if [[ $email =~ $emailpat ]]
+#then
+#echo "valid"
+#else
+#	echo "Invalid"
+#fi
+echo "Enter Phone number"
+read no
+phone="^[0-9]{2}[ ]{1}[0-9]{10}$"
+if [[ $no =~ $phone ]]
+then 
 echo "valid"
 else
-	echo "Invalid"
+echo "Invalid"
 fi
