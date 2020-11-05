@@ -37,10 +37,17 @@ shopt -s extglob
 #fi
 echo "Enter a password"
 read pwd
-pwdpat="^[a-zA-Z0-9]{8,}$"
+pwd=Aklmklmkgjijlj
+a=${#pwd}
+pwdpat="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)+$"
+if [[ $a -ge 8 ]]
+then
 if [[ $pwd =~ $pwdpat ]]
-then 
-echo "Valid"
+then
+echo "valid"
 else
 echo "Invalid"
+fi
+else
+echo "The pwd length is less than 8"
 fi
